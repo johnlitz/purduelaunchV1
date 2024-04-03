@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purdue Launch</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="launch.css">
+</head>
+
+
+<div class="header-inner" , id="myHeader">
+    <img src="https://cdn.glitch.global/f7d04a6f-fe28-4344-9246-bfecaff8a8db/d9b6d7a656c243119af82b7ff90a8772.png?v=1685927103528"
+        alt="Purdue Launch Logo" id="logo">
+    <nav>
+        <ul class="displayCheck">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#team">Our Team</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="dropdown">
+            <button id="showBtn" class="dropbtn">Menu⮟</button>
+            <div style="display: none" id="myDiv" class="dropdown-content">
+                <a></a>
+                <a class="hideBtn" href="#">Home</a>
+                <a class="hideBtn" href="#about">About Us</a>
+                <a class="hideBtn" href="#services">Services</a>
+                <a class="hideBtn" href="#portfolio">Portfolio</a>
+                <a class="hideBtn" href="#team">Our Team</a>
+                <a class="hideBtn" href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<!-- static header testing -->
+<script>
+    window.onscroll = function () { myFunction() };
+
+    var header = document.getElementById("myHeader");
+    var sticky = header.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+    }
+</script>
+
+
+<script>
+    document.getElementById("showBtn").onclick = function () {
+        var myDiv = document.getElementById("myDiv");
+        if (myDiv.style.display === "none") {
+            myDiv.style.display = "block";
+        } else {
+            myDiv.style.display = "none";
+        }
+    };
+
+    var hideBtn = document.getElementsByClassName("hideBtn");
+    for (var i = 0; i < hideBtn.length; i++) {
+        hideBtn[i].onclick = function () {
+            var myDiv = document.getElementById("myDiv");
+            myDiv.style.display = "none";
+        };
+    }
+
+
+</script>
+
+<!-- home -->
+<section id="home">
+    <div class="home-container">
+        <div style="margin: auto; padding-bottom: 200px;">
+            <h2>Welcome to Purdue Launch</h2>
+            <p>Your gateway to consulting and entrepreneurship.</p>
+            <a href="#about" class="cta-btn">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<body>
+
+
+    <!-- about -->
+    <section style="padding-top: 10%;" class="section" id="about">
+        <div class="about-container">
+            <h2>About Us</h2>
+            <p>Purdue Launch has a mission to create a platform for high-achieving Purdue students to express their
+                interest in consulting and the entrepreneurial space. By working with emerging startups, Purdue
+                Launch
+                aims to advance students' practical skills while offering an opportunity to collaborate with unique
+                and
+                innovative professionals.</p>
+        </div>
+    </section>
+
+    <!-- services -->
+    <section class="section" id="services">
+        <div class="services-container">
+            <h2>Our Services</h2>
+            <div class="service">
+                <i class="fas fa-chart-line service-icon"></i>
+                <h3>Consulting</h3>
+                <p>We provide top-tier, pro bono consulting services. Our services are not restricted to any one field.
+                </p>
+            </div>
+            <div class="service">
+                <i class="fas fa-rocket service-icon"></i>
+                <h3>Entrepreneurship</h3>
+                <p>We foster entrepreneurship among students.</p>
+            </div>
+            <!-- Add more services as needed -->
+        </div>
+    </section>
+
+    <!-- portfolio -->
+    <section id="portfolio" class="section">
+        <div class="portfolio-container">
+            <h2>Our Portfolio</h2>
+            <div class="projects">
+                <div class="project">
+                    <img src="project1.jpg" alt="">
+                    <h3>Project 1</h3>
+                    <p>Coming Soon!</p>
+                </div>
+                <!-- Add more projects as needed 
+                <div class="project">
+                    <img src="project2.jpg" alt="Project 2">
+                    <h3>Project 2</h3>
+                    <p>Description of project 2...</p>
+                </div>  -->
+                <!-- Add more projects as needed -->
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- team -->
+    <section class="section">
+        <div id="team" class="team-container">
+            <h2>Meet the Team</h2>
+            <div style="margin-top: 7%;">
+                <div style="justify-content: center;" class="row">
+                    <div class="team-imgBlocks">
+                        <div class="our-team">
+                            <img src="https://i.ibb.co/khcpppv/trevor.jpg" alt="">
+                            <div class="over-layer">
+                                <div class="team-content">
+                                    <h3 class="title">Trevor Flint</h3>
+                                    <span class="post">Founder</span>
+                                </div>
+                            </div>
+                            <ul class="social-links">
+                                <li><a href="https://www.linkedin.com/in/trevor-flint-b5433a1b2"
+                                        class="fab fa-linkedin"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="team-imgBlocks">
+                        <div class="our-team">
+                            <img src="https://cdn.glitch.global/f7d04a6f-fe28-4344-9246-bfecaff8a8db/IMG_9790.png?v=1686174287018"
+                                alt="">
+                            <div class="over-layer">
+                                <div class="team-content">
+                                    <h3 class="title">John Litzsinger</h3>
+                                    <span class="post">web developer</span>
+                                </div>
+                            </div>
+                            <ul class="social-links">
+                                <li><a href="https://www.linkedin.com/in/john-litzsinger-3897a724b/"
+                                        class="fab fa-linkedin"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more team members as needed -->
+        </div>
+    </section>
+    <!-- contact -->
+    <section class="section" id="contact">
+        <div class="contact-container">
+            <h2>Contact Us</h2>
+            <p>We'd love to hear from you!</p>
+            <div class="social-icons">
+                <a href="https://www.twitter.com/purduelaunch" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/purduelaunch" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/purduelaunch" target="_blank"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:admin@purduelaunch.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align: center; color: rgb(255, 255, 255); padding: 25px;"> <small>&copy; Copyright 2023,
+            Purdue Launch. Developed by</small><a href="https://www.linkedin.com/in/john-litzsinger-3897a724b/">John
+            Litzsinger</a> and <a href="https://www.linkedin.com/in/nate-hughes-948664250/">Nate Hughes</a>.</small>
+    </footer>
+</body>
+
+</html>
